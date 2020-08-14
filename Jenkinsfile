@@ -1,4 +1,5 @@
-pipeline { 
+pipeline 
+{ 
     agent any 
     stages {
         stage('Build') { 
@@ -16,13 +17,5 @@ pipeline {
 
             }
         }
-        stage('Deploy') {
-            steps {
-               withMaven(maven : 'apache-maven-3.3.9'){
-                        bat "mvn deploy"
-                }
-
-            }
-        }
     }
-}
+    }
